@@ -36,7 +36,6 @@ const delButtonHandler = async (event) => {
         }
     }
 };
-
 document
     .querySelector('.new-blogpost-form')
     .addEventListener('submit', newFormHandler);
