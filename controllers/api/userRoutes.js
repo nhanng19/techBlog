@@ -14,7 +14,7 @@ router.post("/", async (req, res) => {
       res.json({ user: userData, message: "You are now signed up!"});
     });
   } catch (err) {
-    res.status(400).json(err);
+    res.status(400).json(err)
   }
 });
 
