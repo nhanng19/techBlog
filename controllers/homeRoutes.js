@@ -39,7 +39,7 @@ router.get("/dashboard", withAuth, async (req, res) => {
       logged_in: true,
     });
   } catch (err) {
-    res.status(500).json(err);
+    res.status(500).json(err)
   }
 });
 
