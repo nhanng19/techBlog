@@ -8,4 +8,4 @@ router.use('/blogposts', blogpostRoutes);
 router.use('/comments', commentRoutes);
 
 
-module.exports = router;
+module.exports = router
