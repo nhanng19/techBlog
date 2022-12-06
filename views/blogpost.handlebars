@@ -1,0 +1,59 @@
+<div class="col-md-12 mb-4">
+  <div class="row mt-4 blogpost-header">
+    <div class="col-md-6">
+      <h2 class="blogpost-name-not-link">{{name}}
+      </h2>
+    </div>
+    <div class="col-md-6 created-by">
+      <p><span data-id={{id}} id="blogpost-id"></span>
+        Created by
+        {{user.name}}
+        on
+        {{format_date date_created}}</p>
+    </div>
+  </div>
+  <div class="row blogpost-desc">
+    <p>{{description}}</p>
+  </div>
+</div>
+
+{{#if comments.length}}
+  <div class="col-md-12">
+    <div class="row mt-4 blogpost-header">
+      <div class="col-md-6">
+        <h3 class="blogpost-name-not-link">Current Comments:</h3>
+      </div>
+    </div>
+  </div>
+
+  {{#each comments as |comment|}}
+    <div class="col-md-12 mb-4">
+      <div class="row mt-4 blogpost-desc">
+        <div class="col-md-12">
+          <p>{{description}}</p>
+          <p> -{{user.name}}, {{format_date date_created}}</p>
+        </div>
+      </div>
+    </div>
+  {{/each}}
+{{/if}}
+
+<div class="col-md-12 mb-4 clearfix project">
+  <form class="form new-comment-form">
+    <div class="row mt-4 blogpost-header">
+      <div class="col-md-12">
+        <h3 class="blogpost-name-not-link">Comment:</h3>
+      </div>
+    </div>
+    <div class="row blogpost-desc">
+      <textarea
+        class="form-input"
+        id="comment-desc"
+        name="comment-desc"
+      ></textarea>
+    </div>
+    <div class="form-group">
+      <button type="submit" class="align-center mt-4 btn btn-dark float-right">+ Add Comment</button>
+    </div>
+  </form>
+</div>
